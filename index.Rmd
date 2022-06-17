@@ -3,3 +3,26 @@ title: "My Website"
 ---
 
 Hello, Website!
+
+
+```{r}
+ta = rnorm(1,123,321)
+ta
+
+ta + rnorm(1,1,1)
+
+```
+
+
+the results are 
+
+
+# this should be big
+
+##### and this should be small 
+
+
+
+
+I remerm
+
