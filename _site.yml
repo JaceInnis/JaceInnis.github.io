@@ -1,9 +1,23 @@
-name: "my-website"
+name: Jace Innis
+output_dir: "docs" ## if making website hostable on github with jekyll
 navbar:
-  title: "My Website"
+  title: "Jace Innis"
+  href: false
   left:
-    - text: "Home"
+    - text: "Statistics"
       href: index.html
-    - text: "About"
-      href: about.html
-      
+    - text: "Dive"
+      href: about.html 
+
+  right: 
+    - icon: fa-envelope fa-lg
+      href: mailto:<jace.innis22@gmail.com>
+    - icon: fa-github fa-lg
+      href: http://github.com/JaceInnis/
+output:
+  html_document:
+    theme: flatly
+    highlight: textmate ## Preference
+
+ 
+    

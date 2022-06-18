@@ -1,5 +1,10 @@
 ---
-title: "My Website"
+title: "Jace Innis' Statistics Projects"
+output:
+  distill::distill_article:
+    css: styles.css
+    highlight: rstudio
+    toc: true
 ---
 
 Hello, Website!
@@ -20,7 +25,10 @@ the results are
 # this should be big
 
 ##### and this should be small 
-
+<center>
+!["Salinity"](image1.gif){ width=40% } !["Modis"](image2.gif){ width=40% }
+![Tempurature](image3.gif){ width=40% } !["water velocity"](image4.gif){ width=40% }
+</center>
 
 
 

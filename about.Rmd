@@ -1,5 +1,114 @@
 ---
-title: "About This Website"
+title: "Jace Innis' Dive Log"
+output:
+  distill::distill_article:
+    css: styles.css
+    highlight: rstudio
+    toc: true
 ---
 
-More about this website.
+
+
+## CSUMB Dives
+
+
+```{r include=FALSE}
+
+library(rmarkdown)
+library(distill)
+library(dplyr)
+library(lubridate)
+library(stringr)
+
+data = read.csv("dive.csv")
+
+data$date = paste(data$year,data$month,data$day, sep = "-")
+
+data = data[,c(length(data),5:(length(data)-1))]
+
+data1 = read.csv("PersonalDivelog.csv")
+
+
+```
+The table below shows all dives recorded with csumb, to include:   
+
+* courses (Rescue, Master, Sci Dive)   
+* Senior project  
+* Instruction assistant
+
+Total number of dives: `r nrow(data)`
+
+Number of hours underwater: `r sum(data$Bottom.Time)/60`
+
+
+```{r echo=FALSE, layout="l-screen-inset"}
+
+
+paged_table(data , options = list(rows.print = 15))
+  
+
+```
+
+
+
+## Personal Dive log
+
+The table below shows my personal dive log (dose not include CSUMB dives)
+
+Total number of dives: `r nrow(data1)`
+
+Total number of dives w/ temp < 16$^\circ$c : `r nrow(filter(data1, Temp<16))`
+
+Number of hours underwater: `r sum(data1$Bottom.Time)/60`
+
+Number of hours underwater w/ temp < 16$^\circ$c : `r sum(filter(data1, Temp<16)$Bottom.Time)/60`
+
+
+```{r include=FALSE}
+
+
+data = read.csv("PersonalDivelog.csv")
+
+
+data$Date = dmy(data$Date)
+
+data = data %>% 
+  arrange(desc(Date))
+
+data$Date = paste0(day(data$Date),month(data$Date, label = TRUE),str_sub(data$Date, start = 3L, end = -7L))
+
+
+data = data[,c(1:4,6:8)]
+
+```
+
+
+```{r echo=FALSE, layout="l-screen-inset"}
+
+
+paged_table(data , options = list(rows.print = 15))
+  
+ 
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ```{css echo=FALSE} -->
+<!-- d-title { -->
+<!--     display: none; -->
+<!--   } -->
+<!-- ``` -->
+
+
