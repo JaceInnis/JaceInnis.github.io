@@ -1,5 +1,6 @@
 ---
 title: "Jace Innis' Dive Log"
+description: This page shows my personal dive log and the dive log maintained with CSUMB’s dive program
 output:
   distill::distill_article:
     css: styles.css
@@ -7,9 +8,6 @@ output:
     toc: true
 ---
 
-
-
-## CSUMB Dives
 
 
 ```{r include=FALSE}
@@ -24,24 +22,34 @@ data = read.csv("dive.csv")
 
 data$date = paste(data$year,data$month,data$day, sep = "-")
 
-data = data[,c(length(data),5:(length(data)-1))]
+data = data[,c(14, 8, 9, 5:7, 10:13)]
 
 data1 = read.csv("PersonalDivelog.csv")
 
+s = table(c(data$Specific.Site, data1$Specific.Site))
+
 
 ```
+
+### Dive statistics 
+(calculated with r)
+
+<center>
+Total number of dives: `r nrow(data) + nrow(data1)`  
+Total number of hours underwater: `r sum(data$Bottom.Time)/60+sum(data1$Bottom.Time)/60`  
+Number of 'Cold water dives' : `r nrow(data)+nrow(filter(data1, Temp<16))`  
+Number of hours 'Cold water dives' : `r sum(data$Bottom.Time)/60+sum(filter(data1, Temp<16)$Bottom.Time)/60`   
+Number of unique dive sites `r length(s)`
+</center>
+
+
+## CSUMB Dive log
+
 The table below shows all dives recorded with CSUMB, to include:   
 
-* Dive Courses 
-  - Adv & Rescue SCUBA
-  - SCUBA III: Occup Dive Tech
-  - Scientific Diving Techniques 
-* Senior project  
-* Student Instruction Assistant
-
-Total number of dives: `r nrow(data)`
-
-Number of hours underwater: `r sum(data$Bottom.Time)/60`
+* Dive Courses (Adv & Res, Occup Dive Tech, Sci Diving Techni)  
+* Senior project   
+* Student Instruction Assistant 
 
 
 ```{r echo=FALSE, layout="l-page"}
@@ -58,14 +66,6 @@ paged_table(data , options = list(rows.print = 15))
 
 The table below shows my personal dive log (dose not include CSUMB dives)
 
-Total number of dives: `r nrow(data1)`
-
-Total number of dives w/ temp < 16$^\circ$c : `r nrow(filter(data1, Temp<16))`
-
-Number of hours underwater: `r sum(data1$Bottom.Time)/60`
-
-Number of hours underwater w/ temp < 16$^\circ$c : `r sum(filter(data1, Temp<16)$Bottom.Time)/60`
-
 
 ```{r include=FALSE}
 
@@ -81,7 +81,7 @@ data = data %>%
 data$Date = paste0(day(data$Date),month(data$Date, label = TRUE),str_sub(data$Date, start = 3L, end = -7L))
 
 
-data = data[,c(1:4,6:8)]
+data = data[,c(1:3,8,4,6:7)]
 
 ```
 
