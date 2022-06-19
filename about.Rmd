@@ -30,18 +30,21 @@ data1 = read.csv("PersonalDivelog.csv")
 
 
 ```
-The table below shows all dives recorded with csumb, to include:   
+The table below shows all dives recorded with CSUMB, to include:   
 
-* courses (Rescue, Master, Sci Dive)   
+* Dive Courses 
+  - Adv & Rescue SCUBA
+  - SCUBA III: Occup Dive Tech
+  - Scientific Diving Techniques 
 * Senior project  
-* Instruction assistant
+* Student Instruction Assistant
 
 Total number of dives: `r nrow(data)`
 
 Number of hours underwater: `r sum(data$Bottom.Time)/60`
 
 
-```{r echo=FALSE, layout="l-screen-inset"}
+```{r echo=FALSE, layout="l-page"}
 
 
 paged_table(data , options = list(rows.print = 15))
@@ -83,7 +86,7 @@ data = data[,c(1:4,6:8)]
 ```
 
 
-```{r echo=FALSE, layout="l-screen-inset"}
+```{r echo=FALSE, layout="l-page"}
 
 
 paged_table(data , options = list(rows.print = 15))

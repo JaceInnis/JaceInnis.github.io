@@ -7,30 +7,97 @@ output:
     toc: true
 ---
 
-Hello, Website!
+
+## Shellfish toxicity prediction model
 
 
-```{r}
-ta = rnorm(1,123,321)
-ta
 
-ta + rnorm(1,1,1)
-
-```
-
-
-the results are 
-
-
-# this should be big
-
-##### and this should be small 
 <center>
 !["Salinity"](image1.gif){ width=40% } !["Modis"](image2.gif){ width=40% }
 ![Tempurature](image3.gif){ width=40% } !["water velocity"](image4.gif){ width=40% }
 </center>
 
 
+Over the course of a year, I used various methods in order to see what environmental variables are important in the prediction of shellfish toxicity in the Philippines. I digitized over a decade of HAB reports [HAB reports](http://bfar-frmdhabmonitoring.com.ph/shellfishBulletins/102) from BFAR, a [government agency in the philippines](https://www.bfar.da.gov.ph/). Using this data, which reports the presence of toxic sites, I utilized Java to access data from Google Earth Engine [(GEE)](https://earthengine.google.com/), a geospatial data management system.
 
-I remerm
+### Independent research project
+
+
+<center>
+![](graph.png){ width=60% }  
+</center>
+
+
+For my independent research, I used a novel AI algorithm to predict site toxicity. I trained and tested an artificial neural network using [TensorFlow](https://www.tensorflow.org/) and [Keras](https://keras.io/), two packages made for deep learning. I am continuing my research with support from the Tandy Center for Ocean Forecasting at Bigelow Marine Labs but my initial results are promising. 
+
+
+### Logistic regression verification
+<center>
+
+ $$\LARGE \pi = \frac{e^{\beta _{year}+\beta _{month}+\beta_{sal}+\beta_{vel}+\beta_{temp}+\beta_{temp+vel}}}{1+e^{\beta _{year}+\beta _{month}+\beta_{sal}+\beta_{vel}+\beta_{temp}+\beta_{temp+vel}}}$$ 
+
+###### $\pi$ = the probability of there being a toxic site, $\beta_x$ = envormental variables/time of observation
+
+</center>
+
+
+
+In order to verify my results from the neural network, I conducted a more transparent statistical analysis. A logistic regression was the most appropriate model to test probability. Every environmental variable’s ability to predict site toxicity was tested, accounting for time of the year. The equation above was the final model and used water velocity, salinity, and temperature .
+
+## Drone Image Classification
+
+<center>
+![](uav.png){ width=80% }  
+</center>
+
+
+
+As a student of CSUMB’s done specialist, we programmed and deployed a drone to collect RGB data in the Elkhorn Slough habitat restoration area. This was in order to assess the changes of *salicornia pacifica* over a period of five years. The figure above shows the original image, the classified raster made through a supervised learning algorithm, and the zones used to control for geospatial differences in an ANOVA test. 
+
+
+
+## Shark tracking
+
+<center>
+![](moveVis1.gif){ width=60% }  
+</center>
+
+
+For a class project, my group decided to use [Tagging of Pacific Predators](http://www.coml.org/projects/tagging-pacific-predators-topp.html) data of all white sharks tegged over the past 10 years. This data contained over a hundred thousand of time and location observations spread out between over a hundred individual CSVs. I was in charge of cleaning this data so that statistical analysis could be conducted and also made the animation above to help visualize our data. 
+
+
+## Rain effect on deadzone
+
+<center>
+![](Screenshot.png){ width=70% }  
+</center>
+
+
+In this project, I used NASA’s rainfall dataset in conjunction with a mask created by USGA’s drainage basin shape file in order to assess the correlation between the Louisiana dead zone size and yearly precipitation. The results of the linear model suggest that there is no correlation between rainfall and dead zone size. This means that the nutrient runoff caused by agriculture into the Mississippi drainage basin is likely the result of irrigation and not rain.  
+
+
+## Sand dollar sizing project
+
+<center>
+![](SandD.png){ width=70% }  
+</center>
+
+
+
+For my final scientific dive project, in a group of two, we tested the observation that sand dollars tend to be larger the further from the shore. This is known to be true in Oregon and Washington, and after our 6 dive data collection and analysis, we found it to be true in the Monterey Bay. 
+
+
+## Oil spill's effects on kelp
+
+<center>
+![](KelpB.png){ width=48% }    ![](Kelpbg.png){ width=48% }  
+
+###### Red line represents the time of the American Trader oil spill.
+
+</center>
+
+
+Given kelp biomass extrapolated from canopy coverage obtained from landsat images, I conducted an exploratory data analysis to look for an effect caused by the 1990 American Trader oil spill. I found a significant reduction in the average kelp biomass around the oil spill, and quantified the recovery rate. 
+
+
 
