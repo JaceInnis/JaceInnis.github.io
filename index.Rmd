@@ -32,7 +32,7 @@ Over the course of a year, I used various methods in order to see what environme
 For my independent research, I used a novel AI algorithm to predict site toxicity. I trained and tested an artificial neural network using [TensorFlow](https://www.tensorflow.org/) and [Keras](https://keras.io/), two packages made for deep learning. I am continuing my research with support from the Tandy Center for Ocean Forecasting at Bigelow Marine Labs but my initial results are promising. 
 
 
-### Logistic regression verification
+### Logistic regression parameter verification
 <center>
 
  $$\LARGE \pi = \frac{e^{\beta _{year}+\beta _{month}+\beta_{sal}+\beta_{vel}+\beta_{temp}+\beta_{temp+vel}}}{1+e^{\beta _{year}+\beta _{month}+\beta_{sal}+\beta_{vel}+\beta_{temp}+\beta_{temp+vel}}}$$ 
@@ -64,10 +64,10 @@ As a student of CSUMB’s done specialist, we programmed and deployed a drone to
 </center>
 
 
-For a class project, my group decided to use [Tagging of Pacific Predators](http://www.coml.org/projects/tagging-pacific-predators-topp.html) data of all white sharks tegged over the past 10 years. This data contained over a hundred thousand of time and location observations spread out between over a hundred individual CSVs. I was in charge of cleaning this data so that statistical analysis could be conducted and also made the animation above to help visualize our data. 
+For a class project, my group decided to use [Tagging of Pacific Predators](http://www.coml.org/projects/tagging-pacific-predators-topp.html) data of all white sharks tagged over the past 10 years. This data contained over a hundred thousand of time and location observations spread out between over a hundred individual CSVs. I was in charge of cleaning this data so that statistical analysis could be conducted and also made the animation above to help visualize our data. 
 
 
-## The effect of rain on Gulf deadzone
+## The effect of rain on Gulf dead zone
 
 <center>
 ![](Screenshot.png){ width=70% }  
@@ -93,12 +93,12 @@ For my final scientific dive project, in a group of two, we tested the observati
 <center>
 ![](KelpB.png){ width=48% }    ![](Kelpbg.png){ width=48% }  
 
-###### Red line represents the time of the American Trader oil spill.
+###### Red line represents the the American Trader oil spill event
 
 </center>
 
 
-Given kelp biomass extrapolated from canopy coverage obtained from landsat images, I conducted an exploratory data analysis to look for an effect caused by the 1990 American Trader oil spill. I found a significant reduction in the average kelp biomass around the oil spill, and quantified the recovery rate. 
+Given kelp biomass extrapolated from canopy coverage obtained from landsat images, I conducted an exploratory data analysis to look for an effect caused by the 1990 American Trader oil spill. I found a significant reduction in the average kelp biomass around the oil spill, and quantified the recovery rate. From a two sample T test of before and after the spill I found a significant difference. 
 
 
 

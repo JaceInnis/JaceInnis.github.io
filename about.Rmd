@@ -32,7 +32,7 @@ s = table(c(data$Specific.Site, data1$Specific.Site))
 ```
 
 ### Dive statistics 
-(calculated with r)
+###### (calculated with r)
 
 <center>
 Total number of dives: `r nrow(data) + nrow(data1)`  
@@ -47,7 +47,7 @@ Number of unique dive sites `r length(s)`
 
 The table below shows all dives recorded with CSUMB, to include:   
 
-* Dive Courses (Adv & Res, Occup Dive Tech, Sci Diving Techni)  
+* Dive Courses (Adv. & Res., Occup. Dive Tech., Sci. Diving Technique)  
 * Senior project   
 * Student Instruction Assistant 
 
@@ -64,7 +64,7 @@ paged_table(data , options = list(rows.print = 15))
 
 ## Personal Dive log
 
-The table below shows my personal dive log (dose not include CSUMB dives)
+The table below shows my personal dive log (does not include CSUMB dives)
 
 
 ```{r include=FALSE}

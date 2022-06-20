@@ -2127,11 +2127,11 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li><a href="#shellfish-toxicity-prediction-model">Shellfish toxicity prediction model</a>
 <ul>
 <li><a href="#independent-research-project">Independent research project</a></li>
-<li><a href="#logistic-regression-verification">Logistic regression verification</a></li>
+<li><a href="#logistic-regression-parameter-verification">Logistic regression parameter verification</a></li>
 </ul></li>
 <li><a href="#drone-image-classification">Drone Image Classification</a></li>
 <li><a href="#shark-tracking">Shark tracking</a></li>
-<li><a href="#the-effect-of-rain-on-gulf-deadzone">The effect of rain on Gulf deadzone</a></li>
+<li><a href="#the-effect-of-rain-on-gulf-dead-zone">The effect of rain on Gulf dead zone</a></li>
 <li><a href="#sand-dollar-sizing-project">Sand dollar sizing project</a></li>
 <li><a href="#oil-spills-effects-on-kelp">Oil spill’s effects on kelp</a></li>
 </ul>
@@ -2147,7 +2147,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <img src="graph.png" style="width:60.0%" />
 </center>
 <p>For my independent research, I used a novel AI algorithm to predict site toxicity. I trained and tested an artificial neural network using <a href="https://www.tensorflow.org/">TensorFlow</a> and <a href="https://keras.io/">Keras</a>, two packages made for deep learning. I am continuing my research with support from the Tandy Center for Ocean Forecasting at Bigelow Marine Labs but my initial results are promising.</p>
-<h3 id="logistic-regression-verification">Logistic regression verification</h3>
+<h3 id="logistic-regression-parameter-verification">Logistic regression parameter verification</h3>
 <center>
 <p><span class="math display">\[\LARGE \pi = \frac{e^{\beta _{year}+\beta _{month}+\beta_{sal}+\beta_{vel}+\beta_{temp}+\beta_{temp+vel}}}{1+e^{\beta _{year}+\beta _{month}+\beta_{sal}+\beta_{vel}+\beta_{temp}+\beta_{temp+vel}}}\]</span></p>
 <h6 id="pi-the-probability-of-there-being-a-toxic-site-beta_x-envormental-variablestime-of-observation"><span class="math inline">\(\pi\)</span> = the probability of there being a toxic site, <span class="math inline">\(\beta_x\)</span> = envormental variables/time of observation</h6>
@@ -2162,8 +2162,8 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <center>
 <img src="moveVis1.gif" style="width:60.0%" />
 </center>
-<p>For a class project, my group decided to use <a href="http://www.coml.org/projects/tagging-pacific-predators-topp.html">Tagging of Pacific Predators</a> data of all white sharks tegged over the past 10 years. This data contained over a hundred thousand of time and location observations spread out between over a hundred individual CSVs. I was in charge of cleaning this data so that statistical analysis could be conducted and also made the animation above to help visualize our data.</p>
-<h2 id="the-effect-of-rain-on-gulf-deadzone">The effect of rain on Gulf deadzone</h2>
+<p>For a class project, my group decided to use <a href="http://www.coml.org/projects/tagging-pacific-predators-topp.html">Tagging of Pacific Predators</a> data of all white sharks tagged over the past 10 years. This data contained over a hundred thousand of time and location observations spread out between over a hundred individual CSVs. I was in charge of cleaning this data so that statistical analysis could be conducted and also made the animation above to help visualize our data.</p>
+<h2 id="the-effect-of-rain-on-gulf-dead-zone">The effect of rain on Gulf dead zone</h2>
 <center>
 <img src="Screenshot.png" style="width:70.0%" />
 </center>
@@ -2176,9 +2176,9 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <h2 id="oil-spills-effects-on-kelp">Oil spill’s effects on kelp</h2>
 <center>
 <p><img src="KelpB.png" style="width:48.0%" /> <img src="Kelpbg.png" style="width:48.0%" /></p>
-<h6 id="red-line-represents-the-time-of-the-american-trader-oil-spill.">Red line represents the time of the American Trader oil spill.</h6>
+<h6 id="red-line-represents-the-the-american-trader-oil-spill-event">Red line represents the the American Trader oil spill event</h6>
 </center>
-<p>Given kelp biomass extrapolated from canopy coverage obtained from landsat images, I conducted an exploratory data analysis to look for an effect caused by the 1990 American Trader oil spill. I found a significant reduction in the average kelp biomass around the oil spill, and quantified the recovery rate.</p>
+<p>Given kelp biomass extrapolated from canopy coverage obtained from landsat images, I conducted an exploratory data analysis to look for an effect caused by the 1990 American Trader oil spill. I found a significant reduction in the average kelp biomass around the oil spill, and quantified the recovery rate. From a two sample T test of before and after the spill I found a significant difference.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
