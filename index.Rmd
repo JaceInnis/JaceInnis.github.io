@@ -19,7 +19,7 @@ output:
 </center>
 
 
-Over the course of a year, I used various methods in order to see what environmental variables are important in the prediction of shellfish toxicity in the Philippines. I digitized over a decade of HAB reports [HAB reports](http://bfar-frmdhabmonitoring.com.ph/shellfishBulletins/102) from BFAR, a [government agency in the philippines](https://www.bfar.da.gov.ph/). Using this data, which reports the presence of toxic sites, I utilized Java to access data from Google Earth Engine [(GEE)](https://earthengine.google.com/), a geospatial data management system.
+Over the course of a year, I used various methods in order to see what environmental variables are important in the prediction of shellfish toxicity in the Philippines. I digitized over a decade of  [HAB reports](http://bfar-frmdhabmonitoring.com.ph/shellfishBulletins/102) from BFAR, a [government agency in the philippines](https://www.bfar.da.gov.ph/). Using this data, which reports the presence of toxic sites, I utilized Java to access data from Google Earth Engine [(GEE)](https://earthengine.google.com/), a geospatial data management system.
 
 ### Independent research project
 
