@@ -8,7 +8,7 @@ output:
     toc: true
 ---
 
-## Water movment animation
+## Water movement animation
 
 
 <center>
