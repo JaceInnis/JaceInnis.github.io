@@ -1,0 +1,17 @@
+---
+title: "Drone supervised classification"
+output:
+  distill::distill_article:
+    css: styles.css
+    highlight: rstudio
+    toc: true
+---
+
+ 
+<center>
+![](uav.png){ width=80% }  
+</center>
+
+
+
+As a student of CSUMB’s done specialist, we programmed and deployed a drone to collect RGB data in the Elkhorn Slough habitat restoration area. This was in order to assess the changes of *salicornia pacifica* over a period of five years. The figure above shows the original image, the classified raster made through a supervised learning algorithm, and the zones used to control for geospatial differences in an ANOVA test. 

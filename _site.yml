@@ -1,15 +1,44 @@
 name: Jace Innis
 output_dir: "docs" ## if making website hostable on github with jekyll
+title: "Home"
 navbar:
-  title: "Jace Innis"
-  href: false
   left:
-    - text: "Statistics"
-      href: index.html
     - text: "Dive"
-      href: about.html 
+      menu:
+        - text: "Dive Logs"
+          href: DiveLogs.html
+        - text: "Kelp habitat survey"
+          href: Kelphabitatsurvey.html
+        - text: "Sand dollar sizing"
+          href: Sanddollarsizing.html
+    - text: "Physical Oeanogrophy"
+      menu:
+        - text: "Visualizing Ocean Movement"
+          href: OceanMovment.html
+        - text: "RGEE Package"
+          href: https://github.com/JaceInnis/RGEEtools
+        - text: "Predicting Shellfish Toxisity"
+          href: Shellfish.html
+        - text: "Rain and the Gulf Dead Zone"
+          href: Rain.html
+        - text: "Oil spill's effect on kelp"
+          href: Oil.html
+    - text: "Spatial sci/engr Projects"
+      menu:
+        - text: "Shark tracking"
+          href: shark.html
+        - text: "Santa Lucia preserve topographical map"
+          href: Santa.html
+        - text: "Rancho El Potrero topographical map"
+          href: rancho.html
+        - text: "Drone supervised classification"
+          href: drone.html
+
+
 
   right: 
+    - text: "Jace Innis"
+      href: aboutme.html
     - icon: fa-envelope fa-lg
       href: mailto:<jace.innis22@gmail.com>
     - icon: fa-github fa-lg
