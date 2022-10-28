@@ -18,7 +18,7 @@ navbar:
         - text: "RGEE Package"
           href: https://github.com/JaceInnis/RGEEtools
         - text: "Predicting Shellfish Toxisity"
-          href: Shellfish.html
+          href: DavosSixWeekPrediction.html
         - text: "Rain and the Gulf Dead Zone"
           href: Rain.html
         - text: "Oil spill's effect on kelp"

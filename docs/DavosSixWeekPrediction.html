@@ -84,26 +84,26 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Home: Shellfish toxicity prediction model</title>
+  <title>Home: Davos Six Week Prediction</title>
 
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Home: Shellfish toxicity prediction model"/>
+  <meta property="og:title" content="Home: Davos Six Week Prediction"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Home"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Home: Shellfish toxicity prediction model"/>
+  <meta property="twitter:title" content="Home: Davos Six Week Prediction"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Shellfish toxicity prediction model"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["css","highlight","toc"]}},"value":[{"type":"character","attributes":{},"value":["styles.css"]},{"type":"character","attributes":{},"value":["rstudio"]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Davos Six Week Prediction"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["css","highlight"]}},"value":[{"type":"character","attributes":{},"value":["styles.css"]},{"type":"character","attributes":{},"value":["rstudio"]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2081,7 +2081,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Shellfish toxicity prediction model","authors":[]}
+{"title":"Davos Six Week Prediction","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2147,7 +2147,7 @@ Spatial sci/engr Projects
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Shellfish toxicity prediction model</h1>
+<h1>Davos Six Week Prediction</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -2155,65 +2155,143 @@ Spatial sci/engr Projects
 
 
 <div class="d-article">
-<div class="d-contents d-contents-float">
-<nav class="l-text toc figcaption" id="TOC">
-<h3>Contents</h3>
-<ul>
-<li><a href="#independent-research-project">Independent research
-project</a></li>
-<li><a href="#logistic-regression-parameter-verification">Logistic
-regression parameter verification</a></li>
-</ul>
-</nav>
+<h2 id="preparing-the-responce-variable-toxicity-report">PREPARING THE
+RESPONCE VARIABLE/ TOXICITY REPORT</h2>
+<p>RESPONSE VARIABLE: bureau of fisheries and aquatic resources binary
+toxicity report</p>
+<p>The response variable was recorded from a decade of the Philippine
+bureau of fisheries and aquatic resources that indicates either that a
+site is safe to harvest and eat shellfish, or if a site has shellfish
+with a dangerous level of toxin.</p>
+<p>Example of one such report is below</p>
+<center>
+<img src="183602409_1905912406226434_2739691287780558989_n.jpg"
+style="width:40.0%" />
+</center>
+<p>These reports are published at an irregular interval about every two
+weeks.</p>
+<p>This data was summarized into mean 7 day experimental units.</p>
+<p>A time series of the binary response variable for the site of
+interest is printed below. In essence, this is what we were trying to
+predict</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="DavosSixWeekPrediction_files/figure-html5/unnamed-chunk-2-1.png" width="624" /></p>
 </div>
+<p>In this case, 1 represents when a report was released claiming that
+the shellfish at Matarinao Bay are above the toxic level for consumption
+and 0 represents when the shellfish tested at Matariano Bay are free of
+toxins</p>
+<h2 id="collecting-co-variets">COLLECTING CO-VARIETS</h2>
+<p>Because the Philippines has very little consistent environmental data
+that goes back 10 years, and because the model requires no missing data,
+a global numerical model was used, namely HYCOM.</p>
+<p>HYCOM simulates Water temp, salinity, velocity and height. This is
+offered at various depths and the surface. For the sake of this project,
+these variables were collected near shore and far shore at the surface
+and at a depth of 2000 meters.</p>
+<p>Google earth engine (GEE) was used to collect this data. Specifically
+the R package - RGEE - was used which allows access to the GEE servers
+through R.</p>
+<p>Spatial data like the one pictured below was collected and the mean
+was taken</p>
 <center>
-<img src="image1.gif" style="width:40.0%" alt="“Salinity”" /> <img
-src="image2.gif" style="width:40.0%" alt="“Modis”" /> <img
-src="image3.gif" style="width:40.0%" alt="Tempurature" /> <img
-src="image4.gif" style="width:40.0%" alt="“water velocity”" />
+<img src="Screenshot(267).png" style="width:60.0%" />
 </center>
-<p>Over the course of a year, I used various methods in order to see
-what environmental variables are important in the prediction of
-shellfish toxicity in the Philippines. I digitized over a decade of <a
-href="http://bfar-frmdhabmonitoring.com.ph/shellfishBulletins/102">HAB
-reports</a> from BFAR, a <a
-href="https://www.bfar.da.gov.ph/">government agency in the
-philippines</a>. Using this data, which reports the presence of toxic
-sites, I utilized Java to access data from Google Earth Engine <a
-href="https://earthengine.google.com/">(GEE)</a>, a geospatial data
-management system.</p>
-<h3 id="independent-research-project">Independent research project</h3>
+<p>The above picture shows the three zones that data was collected. The
+black polygons show where the near and far HYCOM data was taken while
+the blue square shows where atmospheric data was collected. Namely the
+<a
+href="https://developers.google.com/earth-engine/datasets/catalog/NASA_GPM_L3_IMERG_V06">NASA
+GES DISC Goddard Global Precipitation Measurement</a></p>
+<p>The data structure of the input variables generally looked like the
+flowing, a 2D matrix where each colum is a different environmental
+variable or derived variable, and each row is the weekly mean going back
+in time.</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>         rain salinity_close Velocity_v_far Velocity_u_far
+25 0.02655488       14170.25       54.70130      170.22727
+26 1.02427425       14189.84      -33.13636       15.66234
+27 0.21296133       14143.21      -51.21429     -280.14935
+28 1.11910397       14046.67     -205.37662       40.00649
+29 0.82092771       13887.04     -322.08442      175.94805
+30 0.21005921       13624.09     -225.68831      244.70779
+31 1.30342593       13621.27     -351.20130      295.09740
+32 0.97262174       13711.07     -202.68831       18.52597
+33 0.36080663       13898.56     -220.24026      -10.66234
+34 0.71835343       14092.62     -237.33766     -267.16883
+   Velocity_v_deep Velocity_u_deep doy Elevation_close
+25      -9.9090909      33.0974026 302        778.2321
+26       8.1558442     -27.8051948 309        834.1696
+27      -6.8701299     -38.6688312 316        805.1607
+28      -4.6558442     -67.4350649 323        824.6607
+29     -19.5194805     -37.7532468 330        881.0089
+30       0.8636364     -38.5000000 337        866.1071
+31      -4.2467532     -36.0649351 344        825.7589
+32     -10.2727273     -27.5584416 351        839.4911
+33     -11.0389610       0.5194805 358        848.4018
+34      -5.4610390       2.5519481 365        858.1161
+   Temp_Annomoly_Close
+25        -0.111381357
+26        -0.133152753
+27         0.241705745
+28        -0.267115152
+29        -0.542196532
+30        -0.268798486
+31        -0.141544501
+32         0.003168306
+33         0.064313102
+34         0.352234929</code></pre>
+</div>
+<p>These were the variables used in the final model. Each row represents
+a week back in time.</p>
+<h2 id="training-the-nural-net">TRAINING THE NURAL NET</h2>
+<p>A deep learning artificial neural network was used to predict the
+binary response variable of the toxicity of the site. Many different
+parameters go into the structure of the model. The number of layers,
+number of nodes per layer, input data size, prediction variable lag and
+drop out rate were all chosen after many trial and error test.</p>
+<p>The 11 years of data was split into 9 and 2 years for training and
+validation. The first 9 years were used for training and the last 2
+years as a validation set.</p>
+<p>Below is an animation of the training of the model. The predicted
+values and reported values are shown.</p>
 <center>
-<img src="graph.png" style="width:60.0%" />
+<img src="traininggif.gif" style="width:60.0%" />
 </center>
-<p>For my independent research, I used a novel AI algorithm to predict
-site toxicity. I trained and tested an artificial neural network using
-<a href="https://www.tensorflow.org/">TensorFlow</a> and <a
-href="https://keras.io/">Keras</a>, two packages made for deep learning.
-I am continuing my research with support from the Tandy Center for Ocean
-Forecasting at Bigelow Marine Labs but my initial results are
-promising.</p>
-<h3 id="logistic-regression-parameter-verification">Logistic regression
-parameter verification</h3>
+<h2 id="results">RESULTS</h2>
+<p>Surprisingly, out of the three models below, the one with the least
+amount of lag between the prediction interval (two weeks) is the worst.
+The best preforming model is the one that predicts four weeks into the
+future.</p>
+<p>The three plots shows the performance of the model on the entire data
+set with distinctions being made between the training and validation
+sets. The model has never seen the validation set and therefore should
+be have a higher weight when evaluating performance.</p>
 <center>
-<p><span class="math display">\[\LARGE \pi = \frac{e^{\beta
-_{year}+\beta
-_{month}+\beta_{sal}+\beta_{vel}+\beta_{temp}+\beta_{temp+vel}}}{1+e^{\beta
-_{year}+\beta
-_{month}+\beta_{sal}+\beta_{vel}+\beta_{temp}+\beta_{temp+vel}}}\]</span></p>
-<h6
-id="pi-the-probability-of-there-being-a-toxic-site-beta_x-envormental-variablestime-of-observation"><span
-class="math inline">\(\pi\)</span> = the probability of there being a
-toxic site, <span class="math inline">\(\beta_x\)</span> = envormental
-variables/time of observation</h6>
+<img src="PointWeek2num2.png" style="width:75.0%" />
 </center>
-<p>In order to verify my results from the neural network, I conducted a
-more transparent statistical analysis. A logistic regression was the
-most appropriate model to test probability. Every environmental
-variable’s ability to predict site toxicity was tested, accounting for
-time of the year. The equation above was the final model and used water
-velocity, salinity, and temperature .</p>
-<div class="sourceCode" id="cb1"><pre
+<center>
+<img src="ConfusValWeek2num2.png" style="width:39.0%" /> <img
+src="ConfusWeek2num2.png" style="width:39.0%" />
+</center>
+<h2 id="section">-</h2>
+<center>
+<img src="PointWeek3num2.png" style="width:75.0%" />
+</center>
+<center>
+<img src="ConfusValWeek3num2.png" style="width:39.0%" /> <img
+src="ConfusWeek3num2.png" style="width:39.0%" />
+</center>
+<h2 id="section-1">-</h2>
+<center>
+<img src="PointWeek4num2.png" style="width:75.0%" />
+</center>
+<center>
+<img src="ConfusValWeek4num2.png" style="width:39.0%" /> <img
+src="ConfusWeek4num2.png" style="width:39.0%" />
+</center>
+<h2 id="section-2">-</h2>
+<div class="sourceCode" id="cb2"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
@@ -2222,15 +2300,6 @@ class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"><
 <div class="d-appendix">
 </div>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
