@@ -1,5 +1,5 @@
 ---
-title: "Davos Six Week Prediction"
+title: "Matariano Bay Shellfish Prediction"
 output:
   distill::distill_article:
     css: styles.css
