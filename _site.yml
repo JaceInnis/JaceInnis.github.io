@@ -11,28 +11,39 @@ navbar:
           href: Kelphabitatsurvey.html
         - text: "Sand dollar sizing"
           href: Sanddollarsizing.html
-    - text: "Physical Oeanogrophy"
+    - text: "Data Science"
       menu:
-        - text: "Visualizing Ocean Movement"
-          href: OceanMovment.html
-        - text: "RGEE Package"
-          href: https://github.com/JaceInnis/RGEEtools
-        - text: "Predicting Shellfish Toxisity"
+        - text: "Machine Learning"
+        - text: "Nural network: Shellfish Toxisity"
           href: DavosSixWeekPrediction.html
+        - text: "Maxent: Shark tracking"
+          href: shark.html
+        - text: "Remote image classification"
+          href: drone.html
+        - text: "---"
+        - text: "Statistics"
         - text: "Rain and the Gulf Dead Zone"
           href: Rain.html
         - text: "Oil spill's effect on kelp"
           href: Oil.html
-    - text: "Spatial sci/engr Projects"
+        - text: "---"
+        - text: "R"
+        - text: "RGEE Package"
+          href: https://github.com/JaceInnis/RGEEtools
+    - text: "Data Visualization"
       menu:
-        - text: "Shark tracking"
-          href: shark.html
+        - text: "Visualizing Ocean Movement"
+          href: OceanMovment.html
+        - text: "Shark tracking visualization"
+          href: sharkvis.html
+        - text: "Ocean variables"
+          href: Shellfish.html
+    - text: "Remote data"
+      menu:
         - text: "Santa Lucia preserve topographical map"
           href: Santa.html
         - text: "Rancho El Potrero topographical map"
           href: rancho.html
-        - text: "Drone supervised classification"
-          href: drone.html
 
 
 
