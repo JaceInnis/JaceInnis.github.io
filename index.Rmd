@@ -1,6 +1,6 @@
 ---
 title: "Jace Innis' Statistics Projects"
-description: This page shows some images that represent my projects. You can browse my projects in the top menu bar or feel free to click any image that interests you to get more information. 
+description: This page showcases a collection of images representing my projects. You can explore my projects through the top menu bar or simply click on any image that catches your attention to access more detailed information.
 output:
   distill::distill_article:
     css: styles.css
@@ -20,12 +20,12 @@ output:
     </span>
 </p>
 <center>
-[![asd](moveVis1.gif){ width=40% }](shark.html) [!["water velocity"](image1.gif){ width=42% }](Shellfish.html)
+[![asd](moveVis1.gif){ width=40% }](shark.html) [!["water velocity"](image1.gif){ width=42% }](GEEvis.html)
 </center>
 <p style="text-align:left;">
     Shark movement
     <span style="float:right;">
-        Shellfish toxicity prediction
+        Java code in GEE to visualise data
     </span>
 </p>
 

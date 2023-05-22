@@ -12,14 +12,17 @@ output:
 </center>
 
 
-For a class project, my group decided to use [Tagging of Pacific Predators](http://www.coml.org/projects/tagging-pacific-predators-topp.html) data of all white sharks tagged over the past 10 years. This data contained over a hundred thousand of time and location observations spread out between over a hundred individual CSVs. I was in charge of cleaning this data so that statistical analysis could be conducted and also made the animation above to help visualize our data. 
+I made the animation above to help visualize shark tracking data [Tagging of Pacific Predators](http://www.coml.org/projects/tagging-pacific-predators-topp.html)
 
 
-<center>
-![](sharkimg.png){ width=49% }  ![](sharkplot.png){ width=49% }
-</center>
+Data visualization, particularly animating movement, plays a crucial role in tracking data by providing a concise and engaging way to understand and communicate complex patterns and behaviors. Sharks are highly mobile creatures, and their movements can be influenced by various factors such as migration, feeding, and breeding. By animating the movement of sharks using visual representations, such as maps or charts, scientists and researchers can effectively convey information about their habitats, migration routes, and potential interactions with other species. 
 
-A machine learning Maxent model was also programmed to look for any significant depths at which we can see the white sharks in relation to temperature. We found that at a depth of 600 meters, the greatest difference in the distribution between the observed values and background values. 
+
+This dynamic visualization enhances our understanding of shark behavior. It shows very clearly what is called by scientist '**the shark cafe**'. The region between Hawaii and Baja California that has a lot of shark activity. 
+
+
+
+
 
 
 

@@ -37,7 +37,7 @@ navbar:
         - text: "Shark tracking visualization"
           href: sharkvis.html
         - text: "Ocean variables"
-          href: Shellfish.html
+          href: GEEvis.html
     - text: "Remote data"
       menu:
         - text: "Santa Lucia preserve topographical map"

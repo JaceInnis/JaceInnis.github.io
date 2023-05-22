@@ -13,7 +13,8 @@ output:
 </center>
 
 
-I have been messing with HYCOM's water velocity data and trying to come up with a way to visualize water movement in order to look for signs of upwelling. I settled on this format that shows the water velocity as vector arrows and the water elevation as a raster. Currently I have a script that can make this animation at any location at any time. 
+I have been analyzing HYCOM's water velocity data to develop a method for visualizing water movement, specifically to identify potential upwelling phenomena. I have devised a format that utilizes vector arrows to represent water velocity and a raster to depict water elevation. I have successfully implemented a script that generates animated visualizations for any desired location and time.
+
 
 
 
