@@ -14,4 +14,6 @@ output:
 
 
 
-As a student of CSUMB’s done specialist, we programmed and deployed a drone to collect RGB data in the Elkhorn Slough habitat restoration area. This was in order to assess the changes of *salicornia pacifica* over a period of five years. The figure above shows the original image, the classified raster made through a supervised learning algorithm, and the zones used to control for geospatial differences in an ANOVA test. 
+As a student specializing in data analysis at CSUMB, our team successfully programmed and deployed a drone for the purpose of collecting RGB data in the Elkhorn Slough habitat restoration area. The objective was to evaluate the variations in salicornia pacifica over a span of five years. The accompanying figure illustrates the original image, the classified raster generated using a supervised learning algorithm, and the designated zones employed to control for geospatial disparities in an ANOVA test.
+
+

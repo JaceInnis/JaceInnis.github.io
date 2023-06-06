@@ -1,15 +1,11 @@
 ---
-title: "Shark tracking data"
+title: "Maxent Shark Tracking"
 output:
   distill::distill_article:
     css: styles.css
     highlight: rstudio
     toc: true
 ---
-
-<center>
-![](moveVis1.gif){ width=60% }  
-</center>
 
 
 I used [Tagging of Pacific Predators](http://www.coml.org/projects/tagging-pacific-predators-topp.html) data of all white sharks tagged over the past 10 years. This data contained over a hundred thousand of time and location observations spread out between over a hundred individual CSVs. Icleaned  this data so that statistical analysis could be conducted 

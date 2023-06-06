@@ -20,7 +20,7 @@ library(ggpubr)
 
 RESPONSE VARIABLE: bureau of fisheries and aquatic resources binary toxicity report
  
-The response variable was recorded from a decade of the Philippine bureau of fisheries and aquatic resources that indicates either that a site is safe to harvest and eat shellfish, or if a site has shellfish with a dangerous level of toxin. 
+The response variable was recorded from two decades of the Philippine bureau of fisheries and aquatic resources that indicates either that a site is safe to harvest and eat shellfish, or if a site has shellfish with a dangerous level of toxin. 
  
 Example of one such report is below
  

@@ -1,5 +1,5 @@
 ---
-title: "Shellfish toxicity prediction model"
+title: "Visualizing Ocean Variables"
 output:
   distill::distill_article:
     css: styles.css

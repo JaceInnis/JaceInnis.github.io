@@ -11,7 +11,7 @@ output:
 <p style="text-align:left;">
 ![](1641413348403.jpg){width=30%}
 <span style="float:right;">
-My name is Jace Innis. I am a recent graduate of marine science and interested in how physical ocean conditions affect phytoplankton, and therefore the world. What interests me the most is the equation of carbon, harmful algal blooms, and measuring things like secondary production and allelopathy.  
+My name is Jace Innis. I am a recent graduate of marine science and interested in the ocean's role in global development. Including everything from phisical ocean conditions, to phytoplankton ecology to overfishing and habitat restoration.
 Currently (or when this was written, July 2022) I am teaching English in the small town of Mapastepec Mexico. I am an avid traveler, reader, diver, and hiker. I enjoy solving problems and learning new skills.
      </span>
 </p>
