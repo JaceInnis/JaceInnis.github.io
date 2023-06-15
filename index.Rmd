@@ -29,10 +29,21 @@ output:
     </span>
 </p>
 
+
 <center>
-[![](santa2.png){ width=40% }](Santa.html) 
+[![](santa2.png){ width=40% }](Santa.html) [![](traininggif.gif){ width=40% }](DavosSixWeekPrediction.html) 
 </center>
-<center>
-Santa Lucia preserve topographical map
-</center>
+<p style="text-align:left;">
+    Santa Lucia preserve topographical map
+    <span style="float:right;">
+        HAB Early Warning System
+    </span>
+</p>
+
+
+
+
+
+
+
 

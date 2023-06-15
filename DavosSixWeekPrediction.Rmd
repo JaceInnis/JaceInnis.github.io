@@ -16,90 +16,46 @@ library(ggpubr)
 ```
 
 
-## PREPARING THE RESPONCE VARIABLE/ TOXICITY REPORT
+(this is a technical report that is a wip and hopfully a future published paper)
 
-RESPONSE VARIABLE: bureau of fisheries and aquatic resources binary toxicity report
+
+## Introduction:
+
+  Red Tide is a general term for marine events that result from the rapid reproduction of algae that change the color of the ocean surface. Sometimes these events are referred to as harmful algal blooms (HABs) when they coincide with the degradation of the environment such as the release of toxins. One impact that HABs have on the environment is the accumulation of toxins in the tissues of molluscs. These toxins do not have a significant effect on the mollusc themselfs, but when accumulated in a high enough concentration and ingested by humans, can result in paralytic shellfish poisoning (PSP), and can even cause death (Grattan et al). 
+
+  The Philippines is one country that suffers from the Health and economic consequences of HABs. The Filipino Bureau of Fisheries and Aquatics Resources (BFAR) reports that within the interval between 1983 and 2002 there were 2122 cases of PSP and 117 deaths (Bajarias et al), ranking the Philippines above all other Asian countries (Azanza and Taylor) . During particularly bad outbreak years, the economic effects can result in millions of pesos in economic losses, disruption of international trading as import bans are imposed and the displacement of thousands of artisan fishers (Bajarias et al). 
+
+  The first recorded case of PSP in the Philippines coincided with visual reports of red tides in the year of 1983 (Estudillo). Since then, PSP and red tides have proliferated throughout the archipelago (Bajarias et al) and the Filipino government has taken measures to limit losses caused by red tides. A national red tide task force was created and implemented a monitoring program that utilizes site sampling and bioassays to determine toxicity. Due to budgeting constraints the frequency and duration of the monitoring surveys vary between sites (Bajarias et al). Reports from this red tide monitoring program was used in this study as the response variable for this forecast
+
  
-The response variable was recorded from two decades of the Philippine bureau of fisheries and aquatic resources that indicates either that a site is safe to harvest and eat shellfish, or if a site has shellfish with a dangerous level of toxin. 
- 
-Example of one such report is below
- 
+Example of report:
 <center>
 ![](183602409_1905912406226434_2739691287780558989_n.jpg){ width=40% }  
 </center>
  
-These reports are published at an irregular interval about every two weeks. 
+An artificial neural network (ANN) is used in this study to predict the toxicity status of different sites in the Philippines. ANNs have shown promising results in forecasting HABs and shellfish contamination and were chosen due to their ability to extract nonlinear relationships in data.
 
-This data was summarized into mean 7 day experimental units. 
- 
-A time series of the binary response variable for the site of interest is printed below. In essence, this is what we were trying to predict
+## Methods:
 
-```{r echo=FALSE}
-
-data = read.csv("MatarianoBayMaster.csv")
-
-data$date = mdy(data$date)
+### Cleaning Responce Variable
 
 
-ggplot(data, aes(x = date, y = sitebi)) +
-  geom_point() +
-  theme_pubclean()+
-  labs(y = "Toxic Level ",title = "Reported values of toxicity at Matariano Bay for the last 11 years")
+The labels for this model, and therefore the focus of the predictive model, are the Red Tide bulletins published by BFAR. These reports are released at an irregular interval, typically about 2 weeks apart and state the status of green muscle toxicity for many sites across the philippines. Toxicity is reported as a binary toxic or not toxic status, so therefore the model’s output will too be binary. 
+	
+These reports are archived on facebook up until 2012, and a information request was submitted to the Filipino buro of information and the status of red tides was provided up until the inception of the red tide program in 2002. These reports provide over 20 years of a very coarse timeline of the status of a very limited number of sites in the Philippines. About 8 sites have been tested regularly since the program's inception.
+  
+###	Data collection:
+A seemingly novel aspect of this project was the use of Google Earth Engine (GEE) for the entirety of data collection. GEE is a free online database with thousands of terabytes of spatial and temporal data that is hosted and accessed through Google's own computing power. This data can be quarried and downloaded through javascript commands through GEE’s API. 
+
+A number of different datasets were used. These include temperature, salinity, water velocity, and water height from the Hybrid Coordinate Ocean Model. Percent cloud coverage from the NCEP-DOE Reanalysis 2 project database. Precipitation from the Global Precipitation Measurement mission. 
+
+Every one of these datasets are extrapolated through space and time and are subject to considerable error. Data was organized into weekly blocks and the mean value for all variables were collected at various locations and associated with the site of reported toxins. This data was paired with the toxin labels and organized into time series for training. 
+
+### Training:
+
+A long term short term (LSTM) sequential neural network was used because of the importance that sequence has in the input data due to it being a time series. The LSTM structure is a variant of the recurrent neural network (RNN) structure and allows for states to be carried from one time feature to the next. In our case that would be one week to the following week. The data was loaded forward facing, meaning that the oldest weeks were the first to be inputted into the model while the most recent weeks were the last. This was done under the assumption that the most recent environmental conditions have the most weight on the status of toxicity. . 
 
 
-```
-
-
-In this case, 1 represents when a report was released claiming that the shellfish at Matarinao Bay are above the toxic level for consumption and 0 represents when the shellfish tested at Matariano Bay are free of toxins 
-
-
-## COLLECTING CO-VARIETS
-
-Because the Philippines has very little consistent environmental data that goes back 10 years, and because the model requires no missing data, a global numerical model was used, namely HYCOM. 
- 
-HYCOM simulates Water temp, salinity, velocity and height. This is offered at various depths and the surface. For the sake of this project, these variables were collected near shore and far shore at the surface and at a depth of 2000 meters. 
-
-Google earth engine (GEE) was used to collect this data. Specifically the R package - RGEE - was used which allows access to the GEE servers through R. 
-
-Spatial data like the one pictured below was collected and the mean was taken
-
-<center>
-![](Screenshot(267).png){ width=60% }  
-</center>
-
-The above picture shows the three zones that data was collected. The black polygons show where the near and far HYCOM data was taken while the blue square shows where atmospheric data was collected. Namely the [NASA GES DISC Goddard Global Precipitation Measurement](https://developers.google.com/earth-engine/datasets/catalog/NASA_GPM_L3_IMERG_V06)
-
-
-
-The data structure of the input variables generally looked like the flowing, a 2D matrix where each colum is a different environmental variable or derived variable, and each row is the weekly mean  going back in time. 
-
-
-```{r echo=FALSE}
-
-data = data[,c(-1,-2, -4)]
-data = data[,c( 3 ,5,10, 11, 14 ,15,16,17,19)]
-
-colnames(data) =  c("rain", "salinity_close", "Velocity_v_far" , "Velocity_u_far", "Velocity_v_deep", "Velocity_u_deep", "doy", "Elevation_close", "Temp_Annomoly_Close")
-
-
-data[25:34, ]
-
-
-```
-
-These were the variables used in the final model. Each row represents a week back in time. 
-
-
-
-## TRAINING THE NURAL NET
-
-
-A deep learning artificial neural network was used to predict the binary response variable of the toxicity of the site. Many different parameters go into the structure of the model. The number of layers, number of nodes per layer, input data size, prediction variable lag and drop out rate were all chosen after many trial and error test. 
- 
-The 11 years of data was split into 9 and 2 years for training and validation. The first 9 years were used for training and the last 2 years as a validation set.    
-
-
-Below is an animation of the training of the model. The predicted values and reported values are shown. 
 
 <center>
 ![](traininggif.gif){ width=60% }  
@@ -150,7 +106,36 @@ The three plots shows the performance of the model on the entire data set with d
 </center>
 
 
-## -
+## Bibliography
+
+
+
+
+Andres, John Kristoffer, Aletta T. Yñiguez, Jennifer Mary Maister, Andrew D. Turner, Dave Eldon B. Olano, Jenelyn Mendoza, Lilibeth Salvador-Reyes, and Rhodora V. Azanza. 2019. “Paralytic Shellfish Toxin Uptake, Assimilation, Depuration, and Transformation in the Southeast Asian Green-Lipped Mussel (Perna Viridis).” Toxins 11 (8): 468. https://doi.org/10.3390/toxins11080468.
+
+
+Azanza, R. V., and F. J. Taylor. 2001. “Are Pyrodinium Blooms in the Southeast Asian Region Recurring and Spreading? A View at the End of the Millennium.” Ambio 30 (6): 356–64.
+
+
+Bajarias, Fe Farida A, Masaaki Kodama, and Setsuko Sakamoto. n.d. “In the Philippines: Option.”
+
+
+Cho, Hyungmin, U-Jin Choi, and Heekyung Park. 2018. “DEEP LEARNING APPLICATION TO TIME-SERIES PREDICTION OF DAILY CHLOROPHYLL-A CONCENTRATION.” In , 157–63. Naples, Italy. https://doi.org/10.2495/EID180141.
+
+
+Chollet, François, and Joseph J. Allaire. 2018. Deep Learning with R. Shelter Island, NY: Manning Publications Co.
+
+
+Cruz, Rafaela C., Pedro Reis Costa, Susana Vinga, Ludwig Krippahl, and Marta B. Lopes. 2021. “A Review of Recent Machine Learning Advances for Forecasting Harmful Algal Blooms and Shellfish Contamination.” Journal of Marine Science and Engineering 9 (3): 283. https://doi.org/10.3390/jmse9030283.
+
+
+Gacutan, R. Q., M. Y. Tabbu, E. J. Aujero, and F. Icatlo. 1985. “Paralytic Shellfish Poisoning Due to Pyrodinium Bahamense Var. Compressa in Mati, Davao Oriental, Philippines.” Marine Biology 87 (3): 223–27. https://doi.org/10.1007/BF00397798.
+
+
+Grattan, Lynn M., Sailor Holobaugh, and J. Glenn Morris. 2016. “Harmful Algal Blooms and Public Health.” Harmful Algae, Harmful Algal Blooms and Public Health, 57 (July): 2–8. https://doi.org/10.1016/j.hal.2016.05.003.
+
+
+Montojo, Ulysses M., Setsuko Sakamoto, Mirriam F. Cayme, Norvida C. Gatdula, Elsa F. Furio, Juan R. Relox, Shigeru Sato, Yasuwo Fukuyo, and Masaaki Kodama. 2006. “Remarkable Difference in Accumulation of Paralytic Shellfish Poisoning Toxins among Bivalve Species Exposed to Pyrodinium Bahamense Var. Compressum Bloom in Masinloc Bay, Philippines.” Toxicon 48 (1): 85–92. https://doi.org/10.1016/j.toxicon.2006.04.014.
 
 
 
