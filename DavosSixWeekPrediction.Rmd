@@ -1,5 +1,5 @@
 ---
-title: "Matariano Bay Shellfish Prediction"
+title: "Shellfish Toxicity Prediction"
 output:
   distill::distill_article:
     css: styles.css
@@ -16,12 +16,12 @@ library(ggpubr)
 ```
 
 
-(this is a technical report that is a wip and hopfully a future published paper)
+(this is a technical report that is a work in progress and hopefully a future published paper)
 
 
 ## Introduction:
 
-  Red Tide is a general term for marine events that result from the rapid reproduction of algae that change the color of the ocean surface. Sometimes these events are referred to as harmful algal blooms (HABs) when they coincide with the degradation of the environment such as the release of toxins. One impact that HABs have on the environment is the accumulation of toxins in the tissues of molluscs. These toxins do not have a significant effect on the mollusc themselfs, but when accumulated in a high enough concentration and ingested by humans, can result in paralytic shellfish poisoning (PSP), and can even cause death (Grattan et al). 
+  Red Tide is a general term for events that are caused by the rapid reproduction of algae that change the color of the ocean surface. Sometimes these events are referred to as harmful algal blooms (HABs) when they coincide with the degradation of the environment such as the release of toxins. One impact that HABs have on the environment is the accumulation of toxins in the tissues of mollusks. These toxins do not have a significant effect on the mollusk themselves, but when accumulated in a high enough concentration and ingested by humans, can result in paralytic shellfish poisoning (PSP), and can even cause death (Grattan et al). 
 
   The Philippines is one country that suffers from the Health and economic consequences of HABs. The Filipino Bureau of Fisheries and Aquatics Resources (BFAR) reports that within the interval between 1983 and 2002 there were 2122 cases of PSP and 117 deaths (Bajarias et al), ranking the Philippines above all other Asian countries (Azanza and Taylor) . During particularly bad outbreak years, the economic effects can result in millions of pesos in economic losses, disruption of international trading as import bans are imposed and the displacement of thousands of artisan fishers (Bajarias et al). 
 
@@ -33,21 +33,21 @@ Example of report:
 ![](183602409_1905912406226434_2739691287780558989_n.jpg){ width=40% }  
 </center>
  
-An artificial neural network (ANN) is used in this study to predict the toxicity status of different sites in the Philippines. ANNs have shown promising results in forecasting HABs and shellfish contamination and were chosen due to their ability to extract nonlinear relationships in data.
+An artificial neural network (ANN) is used in this study to predict the toxicity status of different sites in the Philippines. [ANNs have shown promising results](https://www.mdpi.com/2077-1312/9/3/283) in forecasting HABs and shellfish contamination and were chosen due to their ability to extract nonlinear relationships in data.
 
 ## Methods:
 
-### Cleaning Responce Variable
+### Responce Variable
 
 
-The labels for this model, and therefore the focus of the predictive model, are the Red Tide bulletins published by BFAR. These reports are released at an irregular interval, typically about 2 weeks apart and state the status of green muscle toxicity for many sites across the philippines. Toxicity is reported as a binary toxic or not toxic status, so therefore the model’s output will too be binary. 
+The labels for this model, and therefore the focus of the predictive model, are the Red Tide bulletins published by BFAR. These reports are released at an irregular interval, typically about 2 weeks apart and state the status of green muscle toxicity for many sites across the Philippines. Toxicity is reported as a binary toxic or not toxic status, so the model’s output will too be binary. 
 	
-These reports are archived on facebook up until 2012, and a information request was submitted to the Filipino buro of information and the status of red tides was provided up until the inception of the red tide program in 2002. These reports provide over 20 years of a very coarse timeline of the status of a very limited number of sites in the Philippines. About 8 sites have been tested regularly since the program's inception.
+These reports are archived on facebook up until 2012, and a information request was submitted to the Filipino bureau of information and the status of red tides was provided up until the inception of the red tide program in 2002. These reports provide over 20 years of a very coarse timeline of the status of a very limited number of sites in the Philippines. About 8 sites have been tested regularly since the program's inception.
   
 ###	Data collection:
 A seemingly novel aspect of this project was the use of Google Earth Engine (GEE) for the entirety of data collection. GEE is a free online database with thousands of terabytes of spatial and temporal data that is hosted and accessed through Google's own computing power. This data can be quarried and downloaded through javascript commands through GEE’s API. 
 
-A number of different datasets were used. These include temperature, salinity, water velocity, and water height from the Hybrid Coordinate Ocean Model. Percent cloud coverage from the NCEP-DOE Reanalysis 2 project database. Precipitation from the Global Precipitation Measurement mission. 
+A number of different datasets were used. These include temperature, salinity, water velocity, and water height from the [Hybrid Coordinate Ocean Model](https://developers.google.com/earth-engine/datasets/catalog/HYCOM_sea_temp_salinity#description). Percent cloud coverage from the [NCEP-DOE Reanalysis 2](https://developers.google.com/earth-engine/datasets/catalog/NOAA_NCEP_DOE_RE2_total_cloud_coverage) project database. Precipitation from the Global Precipitation Measurement mission. 
 
 Every one of these datasets are extrapolated through space and time and are subject to considerable error. Data was organized into weekly blocks and the mean value for all variables were collected at various locations and associated with the site of reported toxins. This data was paired with the toxin labels and organized into time series for training. 
 

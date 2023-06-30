@@ -84,26 +84,26 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Home: Matariano Bay Shellfish Prediction</title>
+  <title>Home: Shellfish Toxicity Prediction</title>
 
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Home: Matariano Bay Shellfish Prediction"/>
+  <meta property="og:title" content="Home: Shellfish Toxicity Prediction"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Home"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Home: Matariano Bay Shellfish Prediction"/>
+  <meta property="twitter:title" content="Home: Shellfish Toxicity Prediction"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Matariano Bay Shellfish Prediction"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["css","highlight"]}},"value":[{"type":"character","attributes":{},"value":["styles.css"]},{"type":"character","attributes":{},"value":["rstudio"]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Shellfish Toxicity Prediction"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["css","highlight"]}},"value":[{"type":"character","attributes":{},"value":["styles.css"]},{"type":"character","attributes":{},"value":["rstudio"]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2081,7 +2081,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Matariano Bay Shellfish Prediction","authors":[]}
+{"title":"Shellfish Toxicity Prediction","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2163,7 +2163,7 @@ Remote data
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Matariano Bay Shellfish Prediction</h1>
+<h1>Shellfish Toxicity Prediction</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -2171,19 +2171,19 @@ Remote data
 
 
 <div class="d-article">
-<p>(this is a technical report that is a wip and hopfully a future
-published paper)</p>
+<p>(this is a technical report that is a work in progress and hopefully
+a future published paper)</p>
 <h2 id="introduction">Introduction:</h2>
-<p>Red Tide is a general term for marine events that result from the
-rapid reproduction of algae that change the color of the ocean surface.
+<p>Red Tide is a general term for events that are caused by the rapid
+reproduction of algae that change the color of the ocean surface.
 Sometimes these events are referred to as harmful algal blooms (HABs)
 when they coincide with the degradation of the environment such as the
 release of toxins. One impact that HABs have on the environment is the
-accumulation of toxins in the tissues of molluscs. These toxins do not
-have a significant effect on the mollusc themselfs, but when accumulated
-in a high enough concentration and ingested by humans, can result in
-paralytic shellfish poisoning (PSP), and can even cause death (Grattan
-et al).</p>
+accumulation of toxins in the tissues of mollusks. These toxins do not
+have a significant effect on the mollusk themselves, but when
+accumulated in a high enough concentration and ingested by humans, can
+result in paralytic shellfish poisoning (PSP), and can even cause death
+(Grattan et al).</p>
 <p>The Philippines is one country that suffers from the Health and
 economic consequences of HABs. The Filipino Bureau of Fisheries and
 Aquatics Resources (BFAR) reports that within the interval between 1983
@@ -2209,20 +2209,21 @@ Example of report:
 style="width:40.0%" />
 </center>
 <p>An artificial neural network (ANN) is used in this study to predict
-the toxicity status of different sites in the Philippines. ANNs have
-shown promising results in forecasting HABs and shellfish contamination
-and were chosen due to their ability to extract nonlinear relationships
-in data.</p>
+the toxicity status of different sites in the Philippines. <a
+href="https://www.mdpi.com/2077-1312/9/3/283">ANNs have shown promising
+results</a> in forecasting HABs and shellfish contamination and were
+chosen due to their ability to extract nonlinear relationships in
+data.</p>
 <h2 id="methods">Methods:</h2>
-<h3 id="cleaning-responce-variable">Cleaning Responce Variable</h3>
+<h3 id="responce-variable">Responce Variable</h3>
 <p>The labels for this model, and therefore the focus of the predictive
 model, are the Red Tide bulletins published by BFAR. These reports are
 released at an irregular interval, typically about 2 weeks apart and
 state the status of green muscle toxicity for many sites across the
-philippines. Toxicity is reported as a binary toxic or not toxic status,
-so therefore the model’s output will too be binary.</p>
+Philippines. Toxicity is reported as a binary toxic or not toxic status,
+so the model’s output will too be binary.</p>
 <p>These reports are archived on facebook up until 2012, and a
-information request was submitted to the Filipino buro of information
+information request was submitted to the Filipino bureau of information
 and the status of red tides was provided up until the inception of the
 red tide program in 2002. These reports provide over 20 years of a very
 coarse timeline of the status of a very limited number of sites in the
@@ -2236,10 +2237,12 @@ is hosted and accessed through Google’s own computing power. This data
 can be quarried and downloaded through javascript commands through GEE’s
 API.</p>
 <p>A number of different datasets were used. These include temperature,
-salinity, water velocity, and water height from the Hybrid Coordinate
-Ocean Model. Percent cloud coverage from the NCEP-DOE Reanalysis 2
-project database. Precipitation from the Global Precipitation
-Measurement mission.</p>
+salinity, water velocity, and water height from the <a
+href="https://developers.google.com/earth-engine/datasets/catalog/HYCOM_sea_temp_salinity#description">Hybrid
+Coordinate Ocean Model</a>. Percent cloud coverage from the <a
+href="https://developers.google.com/earth-engine/datasets/catalog/NOAA_NCEP_DOE_RE2_total_cloud_coverage">NCEP-DOE
+Reanalysis 2</a> project database. Precipitation from the Global
+Precipitation Measurement mission.</p>
 <p>Every one of these datasets are extrapolated through space and time
 and are subject to considerable error. Data was organized into weekly
 blocks and the mean value for all variables were collected at various
