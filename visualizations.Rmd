@@ -30,5 +30,11 @@ This gallery collects visual work from projects involving oceanographic data, an
   <p>Google Earth Engine animations and raster analyses comparing salinity, temperature, and sea surface height.</p>
 </article>
 
+<article class="visualization-card">
+  <img src="SantaAnnaTopo.png" loading="lazy" alt="Topographical survey map draft showing elevation contours, property boundaries, and tree canopy drip lines." />
+  <h2>Topographical Surveying &amp; Cartography</h2>
+  <p>Precision topographic map drafting in AutoCAD using field geospatial data collected with a total station, detailing elevation contours, property boundaries, and tree canopy drip lines.</p>
+</article>
+
 </div>
 ```

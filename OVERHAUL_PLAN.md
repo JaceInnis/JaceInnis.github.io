@@ -6,14 +6,20 @@ This document tracks the work needed to refresh the portfolio site while keeping
 
 ### Current phase
 
-4. Build the compact visualization gallery and its supporting structure, including the CSS discussion and image handling. The gallery scaffold is in place; final CSS decisions remain open.
+1. [x] Install the required R Markdown packages and verify that the existing site can render.
+2. [x] Remove duplicated or obsolete generated output and keep `docs` as the single published directory.
+3. [x] Add a reproducible render script for the retained R Markdown pages (`render_site.R`).
+4. [x] Build the compact visualization gallery with ocean dynamics, shark tracking, GEE rasters, and topographic field cartography (`visualizations.Rmd`).
+5. [x] Simplify and modernize navigation in `_site.yml` (Home, Projects dropdown for HAB & Shark modeling, Data Visualizations, About).
+6. [x] Create modern responsive stylesheet `styles.css` with card layouts, hero header, and tag badges.
+7. [x] Redesign homepage (`index.Rmd`) featuring the two primary projects and a link to the visualization gallery.
+8. [x] Modernize About page (`aboutme.Rmd`) with responsive 2-column layout and core toolkit.
+9. [x] Remove obsolete Dive logs, fieldwork surveys, unused images/documents, and unused HTML pages from the repository.
 
-### Later phase
+### Next phase
 
-5. Rewrite and modernize the About page.
-6. Redesign the homepage around the HAB project and the future second machine-learning project.
-
-Tasks 5 and 6 will wait until the About-page content and the new machine-learning project are ready.
+- Refine and finalize content in `DavosSixWeekPrediction.Rmd` / `Shellfish.Rmd` when ready.
+- Add additional machine learning or telemetry case studies as they become available.
 
 ## Goals
 
