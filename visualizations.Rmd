@@ -1,0 +1,32 @@
+---
+title: "Data Visualizations"
+description: "A selection of visualizations exploring ocean movement, marine animals, and environmental conditions."
+output:
+  distill::distill_article:
+    css: styles.css
+    highlight: rstudio
+---
+
+This gallery collects visual work from projects involving oceanographic data, animal movement, and remote sensing. Each entry includes a short description rather than a separate project page.
+
+<div class="visualization-gallery">
+
+<article class="visualization-card">
+<img src="file203471156384.gif" loading="lazy" alt="Animated ocean movement visualization showing changing water velocity and elevation." />
+<h2>Ocean movement</h2>
+<p>Animated HYCOM water-velocity data show how ocean movement and elevation can be visualized across space and time.</p>
+</article>
+
+<article class="visualization-card">
+<img src="moveVis1.gif" loading="lazy" alt="Animated visualization of tagged shark movement." />
+<h2>Shark tracking</h2>
+<p>This visualization presents the movement patterns of tagged sharks through time and across their surrounding marine environment.</p>
+</article>
+
+<article class="visualization-card">
+<img src="image1.gif" loading="lazy" alt="Animated map of ocean salinity generated with Google Earth Engine." />
+<h2>Ocean variables</h2>
+<p>Google Earth Engine animations compare mapped ocean conditions such as salinity, temperature, and water velocity.</p>
+</article>
+
+</div>

@@ -11,7 +11,7 @@ output:
   
 
 <center>
-[!["Salinity"](file203471156384.gif){ width=49% }](OceanMovment.html) [!["Modis"](framehome.gif){ width=40% }](https://github.com/JaceInnis/RGEEtools)
+[!["Salinity"](file203471156384.gif){ width=49% }](visualizations.html) [!["Modis"](framehome.gif){ width=40% }](https://github.com/JaceInnis/RGEEtools)
 </center>
 <p style="text-align:left;">
     Ocean Movement Visualization
@@ -20,7 +20,7 @@ output:
     </span>
 </p>
 <center>
-[![asd](moveVis1.gif){ width=40% }](shark.html) [!["water velocity"](image1.gif){ width=42% }](GEEvis.html)
+[![asd](moveVis1.gif){ width=40% }](shark.html) [!["water velocity"](image1.gif){ width=42% }](visualizations.html)
 </center>
 <p style="text-align:left;">
     Shark movement

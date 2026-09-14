@@ -32,12 +32,8 @@ navbar:
           href: https://github.com/JaceInnis/RGEEtools
     - text: "Data Visualization"
       menu:
-        - text: "Visualizing Ocean Movement"
-          href: OceanMovment.html
-        - text: "Shark tracking visualization"
-          href: sharkvis.html
-        - text: "Ocean variables"
-          href: GEEvis.html
+        - text: "Visualization gallery"
+          href: visualizations.html
     - text: "Remote data"
       menu:
         - text: "Santa Lucia preserve topographical map"
