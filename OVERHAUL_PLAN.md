@@ -6,9 +6,6 @@ This document tracks the work needed to refresh the portfolio site while keeping
 
 ### Current phase
 
-1. [x] Install the required R Markdown packages and verify that the existing site can render. `distill 1.6` is installed; rendering works when R Markdown uses RStudio's bundled Pandoc at `C:/Program Files/RStudio/resources/app/bin/quarto/bin/tools`.
-2. [x] Remove duplicated or obsolete generated output and keep `docs` as the single published directory. The stale tracked `_site` tree was removed; `docs` remains the published output.
-3. [x] Add a reproducible render script for the retained R Markdown pages. `render_site.R` renders the current 16-page source list into `docs` and supports `--dry-run` validation.
 4. Build the compact visualization gallery and its supporting structure, including the CSS discussion and image handling. The gallery scaffold is in place; final CSS decisions remain open.
 
 ### Later phase

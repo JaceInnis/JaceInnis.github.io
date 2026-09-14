@@ -1,59 +1,29 @@
-name: Jace Innis
-output_dir: "docs" ## if making website hostable on github with jekyll
-title: "Home"
+name: "Jace Innis"
+output_dir: "docs"
+title: "Jace Innis"
 navbar:
   left:
-    - text: "Dive"
+    - text: "Home"
+      href: index.html
+    - text: "Projects"
       menu:
-        - text: "Dive Logs"
-          href: DiveLogs.html
-        - text: "Kelp habitat survey"
-          href: Kelphabitatsurvey.html
-        - text: "Sand dollar sizing"
-          href: Sanddollarsizing.html
-    - text: "Data Science"
-      menu:
-        - text: "Machine Learning"
-        - text: "Nural network: Shellfish Toxisity"
+        - text: "Harmful Algal Bloom Prediction"
           href: DavosSixWeekPrediction.html
-        - text: "Maxent: Shark tracking"
+        - text: "White Shark Habitat Modeling"
           href: shark.html
-        - text: "Remote image classification"
-          href: drone.html
-        - text: "---"
-        - text: "Statistics"
-        - text: "Rain and the Gulf Dead Zone"
-          href: Rain.html
-        - text: "Oil spill's effect on kelp"
-          href: Oil.html
-        - text: "---"
-        - text: "R"
-        - text: "RGEE Package"
-          href: https://github.com/JaceInnis/RGEEtools
-    - text: "Data Visualization"
-      menu:
-        - text: "Visualization gallery"
-          href: visualizations.html
-    - text: "Remote data"
-      menu:
-        - text: "Santa Lucia preserve topographical map"
-          href: Santa.html
-        - text: "Rancho El Potrero topographical map"
-          href: rancho.html
-
-
-
-  right: 
-    - text: "Jace Innis"
+    - text: "Data Visualizations"
+      href: visualizations.html
+  right:
+    - text: "About"
       href: aboutme.html
     - icon: fa-envelope fa-lg
-      href: mailto:<jace.innis22@gmail.com>
+      href: mailto:jace.innis22@gmail.com
     - icon: fa-github fa-lg
-      href: http://github.com/JaceInnis/
+      href: https://github.com/JaceInnis
 output:
-  html_document:
-    theme: flatly
-    highlight: textmate ## Preference
+  distill::distill_article:
+    css: styles.css
+    highlight: rstudio
 
  
     

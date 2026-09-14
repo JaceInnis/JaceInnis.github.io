@@ -1,20 +1,40 @@
 ---
-title: "About me"
+title: "About Jace Innis"
+description: "Background, technical focus, and research interests."
 output:
   distill::distill_article:
     css: styles.css
     highlight: rstudio
-    toc: true
 ---
 
- 
-<p style="text-align:left;">
-![](1641413348403.jpg){width=30%}
-<span style="float:right;">
-My name is Jace Innis. I am a recent graduate of marine science and interested in the ocean's role in global development. Including everything from phisical ocean conditions, to phytoplankton ecology to overfishing and habitat restoration.
-Currently (or when this was written, July 2022) I am teaching English in the small town of Mapastepec Mexico. I am an avid traveler, reader, diver, and hiker. I enjoy solving problems and learning new skills.
-     </span>
-</p>
+```{=html}
+<div class="about-grid">
+  <div>
+    <img src="1641413348403.jpg" alt="Jace Innis" class="about-photo" />
+  </div>
+  <div>
+    <h2 style="margin-top: 0; color: var(--primary-dark);">Hi, I'm Jace.</h2>
+    <p>
+      I am a marine data scientist specializing in the intersection of oceanography, geospatial data analysis, and predictive machine learning. My work focuses on modeling complex ocean dynamics—from forecasting Harmful Algal Blooms (HABs) using deep learning to predicting marine species distributions using telemetry and remote sensing.
+    </p>
+    <p>
+      With a background spanning physical ocean conditions, marine ecology, and computational modeling, I build data workflows that transform raw spatial and temporal datasets into actionable insights for coastal management and environmental research.
+    </p>
+
+    <h3 style="color: var(--primary-dark); margin-top: 1.5rem;">Core Technical Toolkit</h3>
+    <ul style="padding-left: 1.2rem; color: var(--text-main); line-height: 1.7;">
+      <li><strong>Data Science &amp; Machine Learning:</strong> Python, R, TensorFlow / Keras, Maxent, Scikit-Learn, Time-Series Modeling (LSTM, RNN)</li>
+      <li><strong>Geospatial &amp; Earth Observation:</strong> Google Earth Engine (GEE), QGIS, ArcGIS, GDAL, NetCDF / Raster Processing</li>
+      <li><strong>Oceanographic Data:</strong> HYCOM, NOAA/NCEP Reanalysis, MODIS, Copernicus Marine, TOPP Telemetry</li>
+    </ul>
+
+    <div class="about-links">
+      <a href="mailto:jace.innis22@gmail.com" class="btn-primary">Email Me</a>
+      <a href="https://github.com/JaceInnis" target="_blank" class="btn-secondary">GitHub Profile</a>
+    </div>
+  </div>
+</div>
+```
 
  
  

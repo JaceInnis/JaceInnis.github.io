@@ -1,44 +1,82 @@
 ---
-title: "Jace Innis' Statistics Projects"
-description: This page showcases a collection of images representing my projects. You can explore my projects through the top menu bar or simply click on any image that catches your attention to access more detailed information.
+title: "Jace Innis"
+description: "Marine data science, geospatial analytics, and ecological machine learning."
 output:
   distill::distill_article:
     css: styles.css
     highlight: rstudio
-    toc: true
 ---
-  
-  
 
-<center>
-[!["Salinity"](file203471156384.gif){ width=49% }](visualizations.html) [!["Modis"](framehome.gif){ width=40% }](https://github.com/JaceInnis/RGEEtools)
-</center>
-<p style="text-align:left;">
-    Ocean Movement Visualization
-    <span style="float:right;">
-        Google earth engine for R
-    </span>
+```{=html}
+<div class="hero-container">
+<div class="hero-title">Jace Innis</div>
+<div class="hero-subtitle">Marine Data Science &bull; Geospatial Analytics &bull; Machine Learning</div>
+<p style="max-width: 650px; margin: 0 auto; color: #e2e8f0; font-size: 1.05rem;">
+Applying computational tools, remote sensing, and predictive modeling to solve complex marine ecological and environmental challenges.
 </p>
-<center>
-[![asd](moveVis1.gif){ width=40% }](shark.html) [!["water velocity"](image1.gif){ width=42% }](visualizations.html)
-</center>
-<p style="text-align:left;">
-    Shark movement
-    <span style="float:right;">
-        Java code in GEE to visualise data
-    </span>
-</p>
+<div class="hero-badges">
+<span class="badge">Machine Learning</span>
+<span class="badge">Google Earth Engine</span>
+<span class="badge">R &amp; Python</span>
+<span class="badge">Geospatial Analysis</span>
+<span class="badge">Time Series</span>
+<span class="badge">Oceanography</span>
+</div>
+</div>
 
+<div class="section-header">
+<h2>Featured Projects</h2>
+<p>Core research initiatives in predictive modeling and ecological species distribution.</p>
+</div>
 
-<center>
-[![](santa2.png){ width=40% }](Santa.html) [![](traininggif.gif){ width=40% }](DavosSixWeekPrediction.html) 
-</center>
-<p style="text-align:left;">
-    Santa Lucia preserve topographical map
-    <span style="float:right;">
-        HAB Early Warning System
-    </span>
+<div class="projects-grid">
+
+<article class="project-card">
+<div class="project-card-image-wrap">
+<img src="traininggif.gif" alt="Neural network training animation for harmful algal bloom prediction" loading="lazy" />
+</div>
+<div class="project-card-body">
+<span class="project-tag">Deep Learning &bull; Time Series</span>
+<h3 class="project-card-title">Harmful Algal Bloom Early Warning System</h3>
+<p class="project-card-text">
+An LSTM sequential neural network pipeline predicting shellfish toxicity and red tide outbreaks in the Philippines using multi-decade monitoring bulletins paired with Google Earth Engine oceanographic data.
 </p>
+<div>
+<a href="DavosSixWeekPrediction.html" class="btn-primary">View Project Details &rarr;</a>
+</div>
+</div>
+</article>
+
+<article class="project-card">
+<div class="project-card-image-wrap">
+<img src="moveVis1.gif" alt="Animated visualization of white shark movement patterns" loading="lazy" />
+</div>
+<div class="project-card-body">
+<span class="project-tag">Machine Learning &bull; Maxent</span>
+<h3 class="project-card-title">White Shark Habitat Suitability Modeling</h3>
+<p class="project-card-text">
+Maximum Entropy (Maxent) species distribution modeling using Tagging of Pacific Predators (TOPP) telemetry and depth-stratified ocean temperature data to identify key environmental drivers of shark distribution.
+</p>
+<div>
+<a href="shark.html" class="btn-primary">View Project Details &rarr;</a>
+</div>
+</div>
+</article>
+
+</div>
+
+<div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2rem; margin: 2rem 0; box-shadow: var(--shadow-sm); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem;">
+<div>
+<h3 style="margin: 0 0 0.4rem 0; color: var(--primary-dark); font-size: 1.3rem;">Explore Data Visualizations</h3>
+<p style="margin: 0; color: var(--text-muted); font-size: 0.95rem;">
+View animated ocean current trajectories, Google Earth Engine environmental rasters, and spatial maps.
+</p>
+</div>
+<div>
+<a href="visualizations.html" class="btn-secondary">Open Visualization Gallery &rarr;</a>
+</div>
+</div>
+```
 
 
 

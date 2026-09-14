@@ -7,18 +7,9 @@ pages <- c(
   "index.Rmd",
   "aboutme.Rmd",
   "visualizations.Rmd",
-  "NewMachineLearningProject.Rmd",
   "DavosSixWeekPrediction.Rmd",
-  "DiveLogs.Rmd",
-  "Kelphabitatsurvey.Rmd",
-  "Oil.Rmd",
-  "Rain.Rmd",
-  "rancho.Rmd",
-  "Sanddollarsizing.Rmd",
-  "Santa.Rmd",
   "shark.Rmd",
-  "Shellfish.Rmd",
-  "drone.Rmd"
+  "Shellfish.Rmd"
 )
 
 args <- commandArgs(trailingOnly = TRUE)

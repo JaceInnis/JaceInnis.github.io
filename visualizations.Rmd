@@ -7,26 +7,28 @@ output:
     highlight: rstudio
 ---
 
-This gallery collects visual work from projects involving oceanographic data, animal movement, and remote sensing. Each entry includes a short description rather than a separate project page.
+This gallery collects visual work from projects involving oceanographic data, animal movement, and remote sensing.
 
+```{=html}
 <div class="visualization-gallery">
 
 <article class="visualization-card">
-<img src="file203471156384.gif" loading="lazy" alt="Animated ocean movement visualization showing changing water velocity and elevation." />
-<h2>Ocean movement</h2>
-<p>Animated HYCOM water-velocity data show how ocean movement and elevation can be visualized across space and time.</p>
+  <img src="file203471156384.gif" loading="lazy" alt="Animated ocean movement visualization showing changing water velocity and elevation." />
+  <h2>Ocean Movement &amp; Hydrodynamics</h2>
+  <p>Animated HYCOM water-velocity and surface elevation data visualizing ocean currents across space and time.</p>
 </article>
 
 <article class="visualization-card">
-<img src="moveVis1.gif" loading="lazy" alt="Animated visualization of tagged shark movement." />
-<h2>Shark tracking</h2>
-<p>This visualization presents the movement patterns of tagged sharks through time and across their surrounding marine environment.</p>
+  <img src="moveVis1.gif" loading="lazy" alt="Animated visualization of tagged shark movement." />
+  <h2>Shark Movement &amp; Telemetry</h2>
+  <p>Spatial tracking visualization presenting tagged white shark migration and behavior patterns across the Pacific.</p>
 </article>
 
 <article class="visualization-card">
-<img src="image1.gif" loading="lazy" alt="Animated map of ocean salinity generated with Google Earth Engine." />
-<h2>Ocean variables</h2>
-<p>Google Earth Engine animations compare mapped ocean conditions such as salinity, temperature, and water velocity.</p>
+  <img src="image1.gif" loading="lazy" alt="Animated map of ocean salinity generated with Google Earth Engine." />
+  <h2>Oceanographic Variables in GEE</h2>
+  <p>Google Earth Engine animations and raster analyses comparing salinity, temperature, and sea surface height.</p>
 </article>
 
 </div>
+```
