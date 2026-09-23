@@ -9,8 +9,8 @@ navbar:
       menu:
         - text: "Harmful Algal Bloom Prediction"
           href: DavosSixWeekPrediction.html
-        - text: "White Shark Habitat Modeling"
-          href: shark.html
+        - text: "Ocean Flux Particle Classification"
+          href: OceanFlux.html
     - text: "Data Visualizations"
       href: visualizations.html
   right:

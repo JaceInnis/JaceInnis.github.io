@@ -49,16 +49,16 @@ An LSTM sequential neural network pipeline predicting shellfish toxicity and red
 
 <article class="project-card">
 <div class="project-card-image-wrap">
-<img src="moveVis1.gif" alt="Animated visualization of white shark movement patterns" loading="lazy" />
+<img src="pelletcount.jpg" alt="Boxplots showing classified ocean particle counts at three sampling depths" loading="lazy" />
 </div>
 <div class="project-card-body">
-<span class="project-tag">Machine Learning &bull; Maxent</span>
-<h3 class="project-card-title">White Shark Habitat Suitability Modeling</h3>
+<span class="project-tag">Computer Vision &bull; Segmentation</span>
+<h3 class="project-card-title">Ocean Flux Particle Classification</h3>
 <p class="project-card-text">
-Maximum Entropy (Maxent) species distribution modeling using Tagging of Pacific Predators (TOPP) telemetry and depth-stratified ocean temperature data to identify key environmental drivers of shark distribution.
+An instance-segmentation pipeline using YOLOv8 to classify sinking marine particles in the Oceanic Flux Program archive, turning microscope images into reproducible measurements of particle abundance and composition.
 </p>
 <div>
-<a href="shark.html" class="btn-primary">View Project Details &rarr;</a>
+<a href="OceanFlux.html" class="btn-primary">View Project Details &rarr;</a>
 </div>
 </div>
 </article>

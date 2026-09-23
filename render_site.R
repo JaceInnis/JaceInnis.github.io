@@ -8,6 +8,7 @@ pages <- c(
   "aboutme.Rmd",
   "visualizations.Rmd",
   "DavosSixWeekPrediction.Rmd",
+  "OceanFlux.Rmd",
   "shark.Rmd",
   "Shellfish.Rmd"
 )
