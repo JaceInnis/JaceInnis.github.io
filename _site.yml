@@ -3,8 +3,6 @@ output_dir: "docs"
 title: "Jace Innis"
 navbar:
   left:
-    - text: "Home"
-      href: index.html
     - text: "Projects"
       menu:
         - text: "Harmful Algal Bloom Prediction"
@@ -16,6 +14,8 @@ navbar:
   right:
     - text: "About"
       href: aboutme.html
+    - text: "Resume"
+      href: MarineScienceTechnicianMaster.pdf
     - icon: fa-envelope fa-lg
       href: mailto:jace.innis22@gmail.com
     - icon: fa-github fa-lg
