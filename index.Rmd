@@ -1,6 +1,6 @@
 ---
 title: "Jace Innis"
-description: "Marine data science, geospatial analytics, and ecological machine learning."
+description: "Marine data science portfolio focused on harmful algal bloom (HAB) forecasting, computer vision, and oceanographic analysis."
 output:
   distill::distill_article:
     css: styles.css
@@ -8,30 +8,9 @@ output:
 ---
 
 ```{=html}
-<div class="hero-container">
-<div class="hero-title">Jace Innis</div>
-<div class="hero-subtitle">Marine Data Science &bull; Geospatial Analytics &bull; Machine Learning</div>
-<p style="max-width: 650px; margin: 0 auto; color: #e2e8f0; font-size: 1.05rem;">
-Applying computational tools, remote sensing, and predictive modeling to solve complex marine ecological and environmental challenges.
-</p>
-<div class="hero-badges">
-<span class="badge">Machine Learning</span>
-<span class="badge">Google Earth Engine</span>
-<span class="badge">R &amp; Python</span>
-<span class="badge">Geospatial Analysis</span>
-<span class="badge">Time Series</span>
-<span class="badge">Oceanography</span>
-</div>
-</div>
-
-<div class="section-header">
-<h2>Featured Projects</h2>
-<p>Core research initiatives in predictive modeling and ecological species distribution.</p>
-</div>
-
 <div class="projects-grid">
 
-<article class="project-card">
+<a class="project-card" href="DavosSixWeekPrediction.html">
 <div class="project-card-image-wrap">
 <img src="traininggif.gif" alt="Neural network training animation for harmful algal bloom prediction" loading="lazy" />
 </div>
@@ -41,15 +20,12 @@ Applying computational tools, remote sensing, and predictive modeling to solve c
 <p class="project-card-text">
 An LSTM sequential neural network pipeline predicting shellfish toxicity and red tide outbreaks in the Philippines using multi-decade monitoring bulletins paired with Google Earth Engine oceanographic data.
 </p>
-<div>
-<a href="DavosSixWeekPrediction.html" class="btn-primary">View Project Details &rarr;</a>
 </div>
-</div>
-</article>
+</a>
 
-<article class="project-card">
+<a class="project-card" href="OceanFlux.html">
 <div class="project-card-image-wrap">
-<img src="pelletcount.jpg" alt="Boxplots showing classified ocean particle counts at three sampling depths" loading="lazy" />
+<img src="2013-04-13_0500_F3_03_33.jpeg" alt="Classified microscope image of ocean particles from a 2013 sample" loading="lazy" />
 </div>
 <div class="project-card-body">
 <span class="project-tag">Computer Vision &bull; Segmentation</span>
@@ -57,11 +33,8 @@ An LSTM sequential neural network pipeline predicting shellfish toxicity and red
 <p class="project-card-text">
 An instance-segmentation pipeline using YOLOv8 to classify sinking marine particles in the Oceanic Flux Program archive, turning microscope images into reproducible measurements of particle abundance and composition.
 </p>
-<div>
-<a href="OceanFlux.html" class="btn-primary">View Project Details &rarr;</a>
 </div>
-</div>
-</article>
+</a>
 
 </div>
 

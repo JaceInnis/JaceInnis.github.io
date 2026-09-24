@@ -40,6 +40,26 @@ body {
   color: #38bdf8 !important;
 }
 
+.distill-site-nav .nav-dropdown-content a {
+  color: var(--text-main) !important;
+}
+
+.distill-site-nav .nav-dropdown-content a:hover {
+  color: var(--primary-color) !important;
+  background-color: #eef6fb !important;
+}
+
+/* Center the homepage title and introduction. */
+.d-title {
+  text-align: center;
+}
+
+.d-title p {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Hero Section */
 .hero-container {
   background: linear-gradient(135deg, #0f2b48 0%, #1a5276 60%, #1e6b98 100%);
@@ -126,6 +146,8 @@ body {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   display: flex;
   flex-direction: column;
+  text-decoration: none !important;
+  color: inherit !important;
 }
 
 .project-card:hover {
@@ -272,6 +294,57 @@ body {
   font-size: 0.9rem;
   line-height: 1.5;
   margin-bottom: 0;
+}
+
+/* Project figures */
+.project-figure {
+  max-width: 760px;
+  margin: 1.5rem auto 2rem auto;
+  text-align: center;
+}
+
+.project-figure-narrow {
+  max-width: 680px;
+}
+
+.project-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+.project-figure p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 0.5rem 0 0 0;
+}
+
+.project-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 900px;
+  margin: 1.5rem auto 2rem auto;
+}
+
+.project-image-grid img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+  .project-image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image-grid img {
+    height: auto;
+  }
 }
 
 /* About Page Layout */

@@ -1,13 +1,11 @@
 ---
 title: "Data Visualizations"
-description: "A selection of visualizations exploring ocean movement, marine animals, and environmental conditions."
+description: "A selection of visualizations exploring various ocean data environmental conditions used in various projects."
 output:
   distill::distill_article:
     css: styles.css
     highlight: rstudio
 ---
-
-This gallery collects visual work from projects involving oceanographic data, animal movement, and remote sensing.
 
 ```{=html}
 <div class="visualization-gallery">
